@@ -2840,7 +2840,7 @@ public final class CameraManager {
                     TextUtils.StringSplitter splitter = new TextUtils.SimpleStringSplitter(',');
                     splitter.setString(packageList);
                     for (String str : splitter) {
-                        if (packageName.equals(str)) {
+                        if (str.equals(packageName)) {
                             exposeAuxCamera = true;
                             break;
                         }
@@ -3118,7 +3118,7 @@ public final class CameraManager {
                 TextUtils.StringSplitter splitter = new TextUtils.SimpleStringSplitter(',');
                 splitter.setString(packageList);
                 for (String str : splitter) {
-                    if (packageName.equals(str)) {
+                    if (str.equals(packageName)) {
                         exposeMonoCamera = true;
                         break;
                     }
@@ -3302,7 +3302,7 @@ public final class CameraManager {
                 TextUtils.StringSplitter splitter = new TextUtils.SimpleStringSplitter(',');
                 splitter.setString(packageList);
                 for (String str : splitter) {
-                    if (packageName.equals(str)) {
+                    if (str.equals(packageName)) {
                         exposeMonoCamera = true;
                         break;
                     }
