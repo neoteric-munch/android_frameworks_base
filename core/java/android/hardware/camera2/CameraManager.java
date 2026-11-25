@@ -2835,6 +2835,9 @@ public final class CameraManager {
                  */
                 boolean exposeAuxCamera = false;
                 String packageName = ActivityThread.currentOpPackageName();
+                if (packageName == null) {
+                    packageName = ActivityThread.currentPackageName();
+                }
                 String packageList = SystemProperties.get("vendor.camera.aux.packagelist");
                 if (packageList.length() > 0) {
                     TextUtils.StringSplitter splitter = new TextUtils.SimpleStringSplitter(',');
@@ -3113,6 +3116,9 @@ public final class CameraManager {
              */
             boolean exposeMonoCamera = false;
             String packageName = ActivityThread.currentOpPackageName();
+            if (packageName == null) {
+                packageName = ActivityThread.currentPackageName();
+            }
             String packageList = SystemProperties.get("vendor.camera.aux.packagelist");
             if (packageList.length() > 0) {
                 TextUtils.StringSplitter splitter = new TextUtils.SimpleStringSplitter(',');
@@ -3297,6 +3303,9 @@ public final class CameraManager {
              */
             boolean exposeMonoCamera = false;
             String packageName = ActivityThread.currentOpPackageName();
+            if (packageName == null) {
+                packageName = ActivityThread.currentPackageName();
+            }
             String packageList = SystemProperties.get("vendor.camera.aux.packagelist");
             if (packageList.length() > 0) {
                 TextUtils.StringSplitter splitter = new TextUtils.SimpleStringSplitter(',');
